@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop – Termékek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+        <button type="button" class="btn btn-primary w-20 m-10"><a href="index.html">Felhasználók</a></button>
+    <div class="container pb-5">
+
+        <h3 class="mb-4 fw-semibold">Elérhető termékek</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" id="products-container">
+
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h5 class="mb-0">Új termék hozzáadása</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="product-name" class="form-label fw-medium">Termék neve</label>
+                                <input type="text" class="form-control" id="product-name" placeholder="Pl. Gaming Laptop Pro X15">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="product-price" class="form-label fw-medium">Ár (Ft)</label>
+                                <input type="number" class="form-control" id="product-price" placeholder="529990">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="product-stock" class="form-label fw-medium">Készlet (db)</label>
+                                <input type="number" class="form-control" id="product-stock" placeholder="12">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="product-rating" class="form-label fw-medium">Értékelés (0–5)</label>
+                                <input type="number" step="0.1" min="0" max="5" class="form-control" id="product-rating" placeholder="4.8">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="manufacturer-name" class="form-label fw-medium">Gyártó neve</label>
+                                <input type="text" class="form-control" id="manufacturer-name" placeholder="TechMaster">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="manufacturer-country" class="form-label fw-medium">Gyártó országa</label>
+                                <input type="text" class="form-control" id="manufacturer-country" placeholder="Japan">
+                            </div>
+                            <div class="col-12">
+                                <label for="product-image" class="form-label fw-medium">Kép URL</label>
+                                <input type="url" class="form-control" id="product-image" placeholder="https://picsum.photos/id/1/400/300">
+                            </div>
+                            <div class="col-12">
+                                <label for="product-features" class="form-label fw-medium">Tulajdonságok (vesszővel elválasztva)</label>
+                                <input type="text" class="form-control" id="product-features" placeholder="Intel Core i7, 32 GB RAM, 1 TB SSD">
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="button" class="btn btn-primary w-100" onclick="submitProductForm(event)">Termék mentése</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://jsdelivr.net" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="products.js"></script>
+</body>
+</html>
